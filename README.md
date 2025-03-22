@@ -70,6 +70,10 @@ psql -U postgres
 # Создание БД:
 CREATE DATABASE project_db;  # Замените project_db на имя БД
 
+Через PgAdmin 4:  
+1. Правой кнопкой на *Databases* → *Create* → *Database*.  
+2. Введите имя БД (например, `project_db`) → *Save*.  
+
 ---
 
 ### 3. Подключение к БД  
