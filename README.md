@@ -78,7 +78,9 @@ CREATE DATABASE project_db;  # Замените project_db на имя БД
 
 ### 3. Подключение к БД  
 Через терминал:  
-psql -U postgres -d project_dbЧерез PgAdmin 4:  
+psql -U postgres -d project_db 
+
+Через PgAdmin 4:  
 - Разверните сервер → правой кнопкой на БД → *Query Tool*.  
 
 ---
