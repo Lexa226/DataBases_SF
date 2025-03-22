@@ -21,5 +21,5 @@
 # REQUIREMENTS:
 1. DB - PostgreSQL 17
 2. PostgreSQL Tools - PgAdmin 4
-3. Для того, чтобы наполнить БД нужно: запустить сервер PostgreSQL (это можно сделать через приложение PostgreSQL или командой в терминале - в зависимости от ОС, см. документацию https://www.postgresql.org/docs/current/app-psql.html) и подключиться к нему (psql -U postgres -d mydatabase) -> создать БД (в PgAdmin 4 или CREATE DATABASE mydatabase;) -> вставить и выполнить скрипт из "DB_X" (также в PgAdmin 4 или терминале)
+3. Для того, чтобы наполнить БД нужно: запустить сервер PostgreSQL (это можно сделать через приложение PostgreSQL или командой в терминале - в зависимости от ОС, [см. документацию](https://www.postgresql.org/docs/current/app-psql.html)) и подключиться к нему (psql -U postgres -d mydatabase) -> создать БД (в PgAdmin 4 или CREATE DATABASE mydatabase;) -> вставить и выполнить скрипт из "DB_X" (также в PgAdmin 4 или терминале)
 4. После можно приступать и наблюдать над манипуляциями с данными в скриптах "task_x"
