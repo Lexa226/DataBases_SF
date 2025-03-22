@@ -56,9 +56,8 @@ brew services start postgresql
 
 # Для конкретной версии (пример для PostgreSQL 15):
 pg_ctl -D /usr/local/var/postgres@15 start
-
 Вариант B: Через приложение:  
-- Запустите Postgres.app или PgAdmin 4 → нажмите *Start Server*.  
+- Запустите Postgres.app или PgAdmin 4 → нажмите *Start Server*.    
 
 ---
 
@@ -87,11 +86,6 @@ psql -U postgres -d project_dbЧерез PgAdmin 4:
 Для скрипта DB_X (создание таблиц и данных):  
 Через терминал:  
 psql -U postgres -d project_db -f /путь/к/папке/DB_X.sql
-  
-*Пример:*  
-psql -U postgres -d project_db -f ~/DataBases_SF/vehicles/DB_1.sqlЧерез PgAdmin 4:  
-1. В *Query Tool* нажмите *Open File* → выберите DB_X.sql.  
-2. Выполните скрипт: *F5* или кнопка *Execute*.  
 
 ---
 
