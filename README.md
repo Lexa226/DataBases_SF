@@ -21,5 +21,63 @@
 # REQUIREMENTS:
 1. DB - PostgreSQL 17
 2. PostgreSQL Tools - PgAdmin 4
-3. Для того, чтобы наполнить БД нужно: запустить сервер PostgreSQL (это можно сделать через приложение PostgreSQL или командой в терминале - в зависимости от ОС, [см. документацию](https://www.postgresql.org/docs/current/app-psql.html)) и подключиться к нему (psql -U postgres -d mydatabase) -> создать БД (в PgAdmin 4 или CREATE DATABASE mydatabase;) -> вставить и выполнить скрипт из "DB_X" (также в PgAdmin 4 или терминале)
+3. ### Последовательность действий для наполнения БД PostgreSQL:
+
+---
+
+#### 1. Запустите сервер PostgreSQL
+- Через терминал (Mac/Linux):
+ 
+  # Если установлен через Homebrew:
+  brew services start postgresql
+
+  # Или для версий (замените @15 на вашу):
+  pg_ctl -D /usr/local/var/postgres start
+  - Через приложение:  
+  Запустите Postgres.app или используйте PgAdmin 4 (кнопка **Start Server**).
+
+---
+
+#### 2. Создайте базу данных
+- Через терминал:
+  1. Подключитесь к серверу:
+    
+     psql -U postgres
+       2. Выполните команду:
+    
+     CREATE DATABASE mydatabase;
+       3. Выйдите:
+    
+     \q
+     - Через PgAdmin 4:
+  1. Правой кнопкой на Databases → Create → Database.
+  2. Укажите имя: mydatabase → Save.
+
+---
+
+#### 3. Подключитесь к созданной БД
+- Через терминал:
+ 
+  psql -U postgres -d mydatabase
+  - Через PgAdmin 4:  
+  Разверните сервер → Правой кнопкой на mydatabase → Query Tool.
+
+---
+
+#### 4. Выполните SQL-скрипт из папки "DB_X"
+- Через терминал:
+ 
+  psql -U postgres -d mydatabase -a -f /полный/путь/к/DB_X/script.sql
+  - Через PgAdmin 4:
+  1. Откройте Query Tool.
+  2. Нажмите Open File → выберите файл script.sql из "DB_X".
+  3. Нажмите Execute (F5 или ⚡).
+
+---
+
 4. После можно приступать и наблюдать над манипуляциями с данными в скриптах "task_x"
+
+### Примечания:
+- Права доступа: Убедитесь, что пользователь postgres имеет доступ к БД.
+- Ошибки в скрипте: Проверьте синтаксис SQL-файла перед выполнением.
+- Документация: [Официальный гайд по psql](https://www.postgresql.org/docs/current/app-psql.html).
