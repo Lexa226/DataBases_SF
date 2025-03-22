@@ -15,4 +15,9 @@
 
 # СТРУКТУРА ПРОЕКТА:
 <img width="447" alt="image" src="https://github.com/user-attachments/assets/2c87b3cc-cf9b-4f05-a059-c68d882d1fc1" />
+
 На фотографии мы видим 4 директории, в каждой из которых есть скрипт под названием DB_X, который позволяет создать и наполнить БД, а также task_x где приведены различные манипуляции над данными.
+
+# REQUIREMENTS:
+1. DB - PostgreSQL 17
+2. PostgreSQL Tools - PgAdmin 4
