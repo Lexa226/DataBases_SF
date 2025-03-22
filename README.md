@@ -56,6 +56,7 @@ brew services start postgresql
 
 # Для конкретной версии (пример для PostgreSQL 15):
 pg_ctl -D /usr/local/var/postgres@15 start
+
 Вариант B: Через приложение:  
 - Запустите Postgres.app или PgAdmin 4 → нажмите *Start Server*.    
 
